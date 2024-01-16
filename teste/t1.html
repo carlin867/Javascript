@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ad{
+            display: none;
+        }
+        p{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Testandooo...</h1>
+    <p onclick="clique()">Clique em mim</p>
+    <p id="ad" onclick="cliqueDenovo()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quidem, unde dolores sint sunt repudiandae blanditiis perferendis optio tenetur itaque! Sit quas similique distinctio modi eius, assumenda tenetur itaque id!</p>
+    
+
+    <script>
+        function clique(){
+            var b = document.querySelector('p')
+            var ad = document.querySelector('#ad')
+            if( ad.style.display = 'none'){
+                ad.style.display = 'block'
+                ad.innerHTML = 'Agora clique aqui'
+            }else{
+                ad.style.display = 'none'
+            }
+        }
+        function cliqueDenovo(){
+            var ad = document.querySelector('#ad')
+            if( ad.style.display = 'block'){
+                ad.style.display = 'none'
+            }else{
+                ad.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>

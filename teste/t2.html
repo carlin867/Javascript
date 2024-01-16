@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="clique()" onmousemove="mover()" onmousedown="segurar()" onmouseout="sair()">
+        Interaja comigo....
+    </div>
+
+
+
+    <script>
+        var it = document.querySelector('div')
+
+        function clique(){
+            it.style.background = 'red'
+            it.innerText = 'Cliquou....'
+        }
+        
+        function mover(){
+            it.style.background = 'lightblue'
+            it.style.scale = '1.2'
+            it.innerText = 'Moveu....'
+        }
+        function segurar(){
+            it.style.background = 'purple'
+            it.style.scale = '1.0'
+            it.innerText = 'Segurou'
+        }
+        function sair(){
+            it.style.background = 'aqua'
+            it.style.scale = '1.0'
+            it.innerText = 'Saiiu...'
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <input type="number" name="txtn1" id="txtn1" />
+    <input type="number" name="txtn2" id="txtn2" />
+    <div id="res">Resultado...</div>
+
+    <input type="button" value="somar" onclick="somar()" />
+    <input type="button" value="subtrair" onclick="subtrair()" />
+    <input type="button" value="multiplicar" onclick="multiplicar()" />
+    <input type="button" value="dividir" onclick="dividir()" />
+    <input type="button" value="potenciar" onclick="potenciar()" />
+
+    <script>
+      function somar() {
+        var tn1 = document.getElementById("txtn1");
+        var tn2 = document.getElementById("txtn2");
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var res = document.getElementById("res");
+        var r = n1 + n2;
+        res.innerHTML = "O resultado da soma de " + n1 + " e " + n2 + " é " + r;
+      }
+      function subtrair() {
+        var tn1 = document.getElementById("txtn1");
+        var tn2 = document.getElementById("txtn2");
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var res = document.getElementById("res");
+        var r = n1 - n2;
+        res.innerHTML = "O resultado da subtração de " + n1 + " menos " + n2 + " é " + r;
+      }
+      function multiplicar() {
+        var tn1 = document.getElementById("txtn1");
+        var tn2 = document.getElementById("txtn2");
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var res = document.getElementById("res");
+        var r = n1 * n2;
+        res.innerHTML = "O resultado da multiplicação de " + n1 + " vezes " + n2 + " é " + r;
+      }
+      function dividir() {
+        var tn1 = document.getElementById("txtn1");
+        var tn2 = document.getElementById("txtn2");
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var res = document.getElementById("res");
+        var r = n1 / n2;
+        res.innerHTML = "O resultado da divisão de " + n1 + " dividido por " + n2 + " é " + r;
+      }
+      function potenciar() {
+        var tn1 = document.getElementById("txtn1");
+        var tn2 = document.getElementById("txtn2");
+        var n1 = Number(tn1.value);
+        var n2 = Number(tn2.value);
+        var res = document.getElementById("res");
+        var r = n1 ** n2;
+        res.innerHTML = "O resultado da pontencia de " + n1 + " elevado a " + n2 + " é " + r;
+      }
+    </script>
+  </body>
+</html>
